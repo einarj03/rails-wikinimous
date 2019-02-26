@@ -1,0 +1,20 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    opacity: 0.8;
+  }
+}
