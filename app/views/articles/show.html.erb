@@ -1,11 +1,15 @@
 <%= render 'navbar' %>
 <div class="container">
-  <h1><%= @article.title %></h1>
-  <%= link_to "Edit", edit_article_path(@article) %>
-  <%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
-  <hr>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h1 class="title">
+        <%= @article.title %>
+        <%= link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_article_path(@article) %>
+        <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+      </h1>
+      <hr>
 
-  <%= link_to "Back to list", articles_path %>
-
-  <p><%= @article.content %></p>
+      <p><%= @article.content %></p>
+    </div>
+  </div>
 </div>
